@@ -1,5 +1,5 @@
 # 1. Download SRA files and convert them to fastq format
-prefetch --option-file 1.sra_list.txt --output-directory /gpfs/radev/scratch/mcdougal/hl993/Cave --max-size 100G 
+prefetch --option-file 1.sra_list.txt --max-size 100G 
 mkdir -p raw
 find . -type f -name "*.sra" | while read -r sra_file; do
     base=$(basename "$sra_file" .sra)
