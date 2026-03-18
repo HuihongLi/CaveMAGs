@@ -6,9 +6,9 @@ A comprehensive prokaryotic genomic catalog from 37 geographically diverse cave 
 
 ## Overview
 
-Cave microorganisms are unique extremophiles that have evolved in isolated, nutrient-limited environments and harbor exceptional metabolic capabilities. Yet knowledge of cave microbial diversity at the genomic level remains limited — previous studies have focused on individual caves and do not provide a global picture.
+Cave microorganisms are unique extremophiles that have evolved in isolated, nutrient-limited environments and harbor exceptional metabolic capabilities. Yet knowledge of cave microbial diversity at the genomic level remains limited — previous studies have focused on individual caves and do not provide a global picture. Here we present the first prokaryotic cave metagenomic catalog spanning 37 geographically diverse cave environments. Using an optimized genome reconstruction pipeline applied to 241 public metagenomic datasets, we recovered 3,837 medium-to-high quality metagenome-assembled genomes (MAGs). These were dereplicated into 1,979 species-level representative clusters covering 67 phyla of Bacteria (*n* = 1,858) and Archaea (*n* = 121).
 
-Here we present the first prokaryotic cave metagenomic catalog spanning 37 geographically diverse cave environments. Using an optimized genome reconstruction pipeline applied to 241 public metagenomic datasets, we recovered 3,837 medium-to-high quality metagenome-assembled genomes (MAGs). These were dereplicated into 1,979 species-level representative clusters covering 67 phyla of Bacteria (*n* = 1,858) and Archaea (*n* = 121).
+
 ---
 
 ## Repository Structure
