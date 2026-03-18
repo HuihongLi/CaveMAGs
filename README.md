@@ -1,2 +1,36 @@
 # CaveMAGs
-Cave microorganisms represent unique extremophiles that have evolved in isolated, nutrient-limited environments and harbor exceptional metabolic capabilities. However, knowledge of cave microbial diversity at genomic level remains limited. Previous studies have focused on individual caves and do not give a global picture. Here, we present the first prokaryotic cave metagenomic catalog from 37 geographical diverse cave environments. We employed an optimized genome reconstruction pipeline to recover 3,837 medium-to-high quality cave metagenome‑assembled genomes (MAGs). These MAGs were dereplicated into 1,979 species‑level representative clusters that spanned 67 phyla of Bacteria (n = 1,858) and Archaea, (n = 121) domains. Classification of representative species showed that 98.7% did not match any existing genome taxonomy classification of named species at ≥95% average nucleotide identity (ANI). Most representative genomes harbored putative biosynthetic gene clusters (BGCs) (98.0%) and enzymatic antibiotic resistance genes (ARGs) (95.0%). This comprehensive MAGs catalog provides a foundational resource for exploring cave microbial diversity, secondary metabolism, and the evolutionary origins of antibiotic resistance in subterranean ecosystems.
+
+A comprehensive prokaryotic genomic catalog from 37 geographically diverse cave environments, built with an optimized metagenome-assembled genome (MAG) reconstruction pipeline.
+
+---
+
+## Overview
+
+Cave microorganisms are unique extremophiles that have evolved in isolated, nutrient-limited environments and harbor exceptional metabolic capabilities. Yet knowledge of cave microbial diversity at the genomic level remains limited — previous studies have focused on individual caves and do not provide a global picture.
+
+Here we present the first prokaryotic cave metagenomic catalog spanning 37 geographically diverse cave environments. Using an optimized genome reconstruction pipeline applied to 241 public metagenomic datasets, we recovered 3,837 medium-to-high quality metagenome-assembled genomes (MAGs). These were dereplicated into 1,979 species-level representative clusters covering 67 phyla of Bacteria (*n* = 1,858) and Archaea (*n* = 121).
+---
+
+## Repository Structure
+
+```
+CaveMAGs/
+├── Script.sh          # Complete bioinformatics pipeline (14 steps)
+├── Output/
+│   ├── 1.sra_list.txt # NCBI SRA accession numbers for all 241 samples
+│   └── 2.samples.tsv  # Sample metadata: SampleID, front-trim bases (F), tail-trim bases (T)
+└── README.md
+```
+
+### Output Files
+
+| File | Description |
+|---|---|
+| `Output/1.sra_list.txt` | 241 NCBI SRA accession numbers (prefetch input) |
+| `Output/2.samples.tsv` | Three-column TSV: `SampleID`, `F`, `T`. `F` is passed to fastp as `-f`/`-F` (hard-trim *F* bases from the 5′ end of read 1 and read 2); `T` is passed as `-t`/`-T` (hard-trim *T* bases from the 3′ end of read 1 and read 2). Values were chosen per sample to remove low-quality cycles at the read termini. |
+
+---
+
+## Pipeline
+
+The pipeline is documented as a series of shell commands in [`Script.sh`](Script.sh)
